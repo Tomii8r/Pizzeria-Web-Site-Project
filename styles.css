@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: #2C2C2C;
+    background-color: #ffff;
+}
+
+div, header, nav, ul, h1, h2, p, img{
+    box-sizing: border-box;
+}
+
+/* --- HEADER SECTION ---*/
+
+.header {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url("https://revistadiners.com.co/wp-content/uploads/2024/05/portada_pizzardi_1200x800_2025.jpg");
+    background-size: cover;
+    display: flex;
+    font-weight: bolder;
+}
+
+.header__overlay {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f9f5ec25;
+    position: absolute;
+    z-index: 1;
+}
+
+.header__item-container{
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+.header__item-container p {
+    text-wrap: pretty;
+    font-size: clamp(1.5rem, 4vw, 1.6rem);
+}
+
+.header__img{
+    min-width: 250px;
+    max-width: 40%;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    margin: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(1.5rem, 4vw, 2.6rem);
+    text-wrap: balance;
+    color: #D72638;
+    background-color: #0000007c;
+}
+
+/* --- NAVBAR SECTION --- */
+
+.nav {
+    flex-direction: row;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 6px 20px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 25px #0009;
+    z-index: 20;
+}
+
+.nav__ul {
+    flex-direction: row;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav__item {
+    list-style: none;
+}
+
+.nav__logo-container{
+    flex-grow: 1;
+    text-align: center
+}
+
+.nav__ul-container {
+    flex-grow: 4;
+    text-align: center;
+}
+
+.nav__link {
+    color:#1B1B1B;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 6px;
+    border-radius: 0;
+    transition: background-color 0.3s, border-radius 0.24s, outline 0.3s, outlineoffset 0.3s, color 0.3s;
+    margin: 2px;
+    outline: 0;
+    outline-offset: 0;
+}
+
+.nav__link:hover {
+    background-color: #D72638;
+    color: #FFCF56;
+    border-radius: 20px;
+    outline: 2px solid #B4B4B4;
+    outline-offset: -8px;
+}
+
+.link--login {
+    background-color:  #D72638;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 24px;
+    margin-left: 6px;
+    transition: padding 0.3s;
+}
+
+.link--login:hover {
+    color: #3b3b3b;
+    background-color:  #c22232;
+    outline: none;
+    padding: 10px 30px;
+}
+
+.nav__logo {
+    width: 70px;
+}
+
+/* --- MAIN SECTION --- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main__h2 {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.6rem);
+    margin-bottom: 20px;
+    color: #D72638;
+    font-family: 'Pacifico', cursive;
+}
+
+/* SECCION CATEGORIAS*/
+.grid-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6.8rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.categorias {
+    width: 30vw; /* Tamaño responsivo */
+    aspect-ratio: 1 / 1; /* Mantiene forma cuadrada */
+    background-color: orange;
+    min-width: 200px;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0005;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+
+    background-size: cover;       /* cubre todo el área */
+    background-position: center;  /* centra la imagen */
+    background-repeat: no-repeat; 
+}
+
+.categorias p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* para centrar el texto dentro */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.categorias:hover {
+    transform: scale(1.05);
+}
+
+
+.main__link {
+    color:#1B1B1B;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 6px;
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 2px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    border: 2px solid #5B2C2B;
+    border-radius: 12px;
+    transition: backgroud-color 0.5s, color 0.5s;
+}
+
+.main__link:hover:hover{
+    background-color: #5B2C2B;
+    color: #F9F5EC;
+}
+
+
+
+
+/* SECCION RESEÑAS */
+
+#Medios_pedido {
+    padding: 2rem;
+    background-color: #1B1B1B; /* tono suave para contraste */
+    text-align: center;
+    margin-top: 100px;
+    min-width: 100%;
+}
+
+.grid-reseñas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    min-width: 100%;
+    max-width: 1200px;
+}
+
+.reseña {
+    color: #B4B4B4;
+    font-size: clamp(1.5rem, 4vw, 1.6rem);
+    aspect-ratio: 1 / 1;
+    background-color: #3b3b3b;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    min-width: 250px;
+    max-width: 300px;
+    margin: 0 auto;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.reseña:hover {
+    transform: scale(1.05);
+}
+
+.reseña img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Responsive: 3 columnas en desktop */
+@media (min-width: 768px) {
+    .grid-reseñas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

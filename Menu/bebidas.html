@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="../images/logo-small_without_background.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <!-- tu nav va acá -->
+    <nav class="nav">
+        <div class="nav__ul-container">
+            <ul class="nav__ul">
+                <li class="nav__item"><a href="../index.html" class="nav__link">INICIO</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">MENU</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">GALERIA</a></li>
+                <li class="nav__item"><a href="../index.html" class="nav__link link--login">PEDIR YA</a></li>
+            </ul>
+        </div>
+        <div class="nav__logo-container">
+            <img src="../images/logo-small_without_background.png" class="nav__logo">
+        </div>
+    </nav>
+    <nav class="categorias">
+        <button class="categorias__toggle">☰ Categorías</button>
+        <div class="categorias__links">
+            <a href="pizzas.html">🍕 Pizzas</a>
+            <a href="empanadas.html">🥟 Empanadas</a>
+            <a href="#">🥤 Bebidas</a>
+        </div>
+    </nav>
+    <!-- contenido a la derecha -->
+    <main>
+        <h1>Nuestras Bebidas</h1>
+        <div class="grid">
+            <a href="#bebida1" class="card">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/CL39GXbNkeQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLASA4-ktM7CvNfBUzGZmjfp8vGLTA" alt="Agua">
+                    <div class="card-content">
+                    <h2>Agua</h2>
+                    <p>Refrescante...</p>
+                    <div class="precio">$1000</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#bebida2" class="card">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWjFBQettjRQmqGXWy71jQQqbuJblJyNO1xg&s" alt="Pepsi">
+                    <div class="card-content">
+                        <h2>Gaseosas linea Pepsi</h2>
+                        <p>Relajate y senti el sabor...</p>
+                    <div class="precio">$2000</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#bebida3" class="card">
+                <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Corona_Extra_%28Anheuser-Busch_InBev%29.jpg/1200px-Corona_Extra_%28Anheuser-Busch_InBev%29.jpg" alt="Cerveza Corona">
+                    <div class="card-content">
+                        <h2>Cervezas</h2>
+                        <p>Comparti...</p>
+                        <div class="precio">$2500</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- MODALES -->
+    <div id="bebida1" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="https://i.ytimg.com/vi/CL39GXbNkeQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLASA4-ktM7CvNfBUzGZmjfp8vGLTA" alt="Agua">
+            <h2>Agua</h2>
+            <p>El agua es vida, asi que refrecate de vida mientras difrutas de la buena comida de Simba</p>
+            <div class="precio">$1000</div>
+        </div>
+    </div>
+
+    <div id="bebida2" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWjFBQettjRQmqGXWy71jQQqbuJblJyNO1xg&s" alt="Pepsi">
+            <h2>Gaseosas linea Pepsi</h2>
+            <p>Pepsi es sabor y compartir en familia es por eso que en pizzeria Simba nos gusta compartir y comer con la familia</p>
+            <div class="precio">$2000</div>
+        </div>
+    </div>
+
+    <div id="bebida3" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Corona_Extra_%28Anheuser-Busch_InBev%29.jpg/1200px-Corona_Extra_%28Anheuser-Busch_InBev%29.jpg" alt="Ceerveza Corona">
+            <h2>Cervezas</h2>
+            <p>Nada mejor que compartir una cerveza con tus amigos mientras se habla de la vida</p>
+            <div class="precio">$2500</div>
+        </div>
+    </div>
+
+    <script>
+document.querySelector(".categorias__toggle").addEventListener("click", () => {
+    document.querySelector(".categorias").classList.toggle("open");
+});
+</script>
+
+</body>
+</html>
