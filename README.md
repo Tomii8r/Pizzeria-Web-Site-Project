@@ -17,5 +17,8 @@ Ahora estoy mejorando la organización y estética, y probando nuevas cosas para
 - Integrar fuentes y colores más personalizados para darle un toque único.
 
 ---
+UPDATE 21/08/2025
+-Arregle un bug en la seccion del menu donde el nav lateral desaparecia pero aun ocupaba espacio provocando que las pizzas sigan respetando el margen y se desconfiguraba todo.
 
 👉 Este proyecto muestra cómo voy avanzando en comparación con la página anterior de **Charly García**. Ahora ya no es solo texto con CSS, sino que empecé a darle una estructura más cercana a una web real de restaurante.  
+LINK DE LA PAGINA: https://tomii8r.github.io/Pizzeria-Web-Site-Project/
