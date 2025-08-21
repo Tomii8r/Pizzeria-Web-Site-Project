@@ -6,7 +6,23 @@ body {
 
 }
 
+.container {
+    display: flex;
+}
+
 /*MENU ARRIBA*/
+@media (max-width: 768px) {
+    .nav__logo{
+        display: none;
+    }
+    .link--login{
+        display: none;
+    }
+    .nav__ul-container{
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
 .nav {
     flex-direction: row;
     background-color: #fff;
@@ -126,52 +142,12 @@ body {
     cursor: pointer;
 }
 
-/* ----- móvil / tablet ----- */
-@media (max-width: 768px) {
-    .categorias {
-        position: fixed;
-        top: 70px;   /* debajo del nav principal */
-        left: 0;
-        width: 100%;
-        height: auto;
-        transform: translateY(-100%); /* oculto por defecto */
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
 
-    /* Mostrar botón hamburguesa */
-    .categorias__toggle {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-
-    /* links ocultos hasta que se active */
-    .categorias__links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* cuando está activa (clase open en .categorias) */
-    .categorias.open {
-        transform: translateY(0);
-    }
-    .categorias.open .categorias__links {
-        display: flex;
-    }
-
-    /* contenido ocupa todo el ancho */
-    main {
-        margin-left: 0;
-    }
-}
 
 
 /* contenido */
 main {
-    margin-left: 220px; /* deja espacio para el menú */
+    margin-left: 250px; /* deja espacio para el menú */
     padding: 30px;
     flex: 1;
     }
@@ -195,6 +171,7 @@ h1 {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.6);
     transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
 }
 .card:hover {
     transform: translateY(-5px);
@@ -276,4 +253,53 @@ h1 {
     color: #ffffff;
     background-color: #fa0505;
     font-weight: bold;
+}
+
+/* ----- móvil / tablet ----- */
+@media (max-width: 768px) {
+    .categorias {
+        position: fixed;
+        top: 70px;   /* debajo del nav principal */
+        left: 0;
+        width: 100%;
+        height: auto;
+        transform: translateY(-100%); /* oculto por defecto */
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .categorias__toggle {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* links ocultos hasta que se active */
+    .categorias__links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* cuando está activa (clase open en .categorias) */
+    .categorias.open {
+        transform: translateY(0);
+    }
+    .categorias.open .categorias__links {
+        display: flex;
+    }
+
+    /* contenido ocupa todo el ancho */
+    main {
+        margin-left: 0;
+    }
+    .card{
+        flex: 1;
+        margin-left: 0;
+    }
+    main {
+        margin-left: 0;
+    }
 }
