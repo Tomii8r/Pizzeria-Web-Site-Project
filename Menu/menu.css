@@ -10,19 +10,6 @@ body {
     display: flex;
 }
 
-/*MENU ARRIBA*/
-@media (max-width: 768px) {
-    .nav__logo{
-        display: none;
-    }
-    .link--login{
-        display: none;
-    }
-    .nav__ul-container{
-        min-width: 100%;
-        min-height: 100%;
-    }
-}
 .nav {
     flex-direction: row;
     background-color: #fff;
@@ -178,6 +165,10 @@ h1 {
     box-shadow: 0 6px 16px rgba(0,0,0,0.8);
 }
 
+.card a {
+    text-decoration: none;
+}
+
 .card img {
     width: 100%;
     height: 180px;
@@ -267,6 +258,7 @@ h1 {
         flex-direction: column;
         gap: 10px;
         padding: 10px;
+        z-index: 15;
     }
 
     /* Mostrar botón hamburguesa */
@@ -286,6 +278,7 @@ h1 {
     /* cuando está activa (clase open en .categorias) */
     .categorias.open {
         transform: translateY(0);
+        top: 10px;
     }
     .categorias.open .categorias__links {
         display: flex;
@@ -299,7 +292,16 @@ h1 {
         flex: 1;
         margin-left: 0;
     }
-    main {
-        margin-left: 0;
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.8);
+    }
+    .nav__logo{
+        width: 35px;
+    }
+    .nav__ul-container{
+        min-width: 100%;
+        min-height: 100%;
+        flex: 1;
     }
 }
