@@ -250,7 +250,7 @@ h1 {
 @media (max-width: 768px) {
     .categorias {
         position: fixed;
-        top: 70px;   /* debajo del nav principal */
+        top: auto;   /* debajo del nav principal */
         left: 0;
         width: 100%;
         height: auto;
@@ -258,7 +258,7 @@ h1 {
         flex-direction: column;
         gap: 10px;
         padding: 10px;
-        z-index: 15;
+        z-index: 20;
     }
 
     /* Mostrar botón hamburguesa */
@@ -278,7 +278,7 @@ h1 {
     /* cuando está activa (clase open en .categorias) */
     .categorias.open {
         transform: translateY(0);
-        top: 10px;
+        top: 40px;
     }
     .categorias.open .categorias__links {
         display: flex;
