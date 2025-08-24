@@ -76,5 +76,14 @@
             </div>
         </div>
     </section>
+    <script>
+        const modal = document.getElementById('modal');
+        const btnCerrar = document.getElementById('cerrar');
+
+        // Cerrar al hacer click en el botón
+        btnCerrar.addEventListener('click', () => {
+        modal.close ? modal.close() : modal.removeAttribute('open');
+        });
+    </script>
 </body>
 </html>
